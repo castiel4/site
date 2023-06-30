@@ -1,0 +1,186 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 20px;
+}
+
+.conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.conteudo h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para a versão mobile (menu hamburguer) */
+#hamburguer-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  #hamburguer-icon {
+    display: block;
+  }
+
+  .show-nav {
+    display: flex;
+  }
+}
+
+/* Estilos específicos para cada página */
+
+/* Estilos para a página "quem-sou-eu.html" */
+.quem-sou-eu {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estilos para a página "projetos.html" */
+.projetos {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projetos .projeto {
+  margin-bottom: 30px;
+}
+
+.projetos img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para a página "linkedin.html" */
+.linkedin {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.linkedin a {
+  background-color: #0077B5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.linkedin a:hover {
+  background-color: #005e99;
+}
+
+/* Estilos para a página "contatos.html" */
+.contatos {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Ícones para os links das páginas */
+nav a[href="contatos.html"]::before {
+  background-image: url(contact.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+nav a[href="quem-sou-eu.html"]::before {
+  background-image: url(user.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+nav a[href="linkedin.html"]::before {
+  background-image: url(linkedin.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+nav a[href="projetos.html"]::before {
+  background-image: url(project-management.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+section {
+  padding: 2rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
